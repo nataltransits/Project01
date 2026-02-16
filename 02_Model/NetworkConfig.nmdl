@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<NetworkModel version="1.0">
+    <Nodes>
+        <Node name="BodyControlUnit" id="1" description="BCU - 主制御ECU"/>
+        <Node name="LightSensorUnit" id="2" description="LSU - 照度センサー"/>
+    </Nodes>
+
+    <Messages>
+        <Message name="AmbientLightStatus" id="0x100" transmitter="LightSensorUnit">
+            <Signals>
+                <Signal name="IlluminanceValue" startBit="0" length="16" unit="Lux"/>
+            </Signals>
+        </Message>
+    </Messages>
+</NetworkModel>
