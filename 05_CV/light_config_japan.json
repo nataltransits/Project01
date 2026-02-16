@@ -1,0 +1,8 @@
+{
+    "VariantName": "Japan_Standard",
+    "Parameters": {
+        "Threshold_ON": 1000,
+        "Threshold_OFF": 2000,
+        "Hysteresis_Time_ms": 500
+    }
+}

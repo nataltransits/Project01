@@ -1,0 +1,8 @@
+{
+    "VariantName": "North_America",
+    "Parameters": {
+        "Threshold_ON": 1500,
+        "Threshold_OFF": 2500,
+        "Hysteresis_Time_ms": 500
+    }
+}
