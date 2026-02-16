@@ -4,6 +4,7 @@
 
 extern int IlluminanceValue;
 extern void Set_Hardware_Light(int status);
+extern int Received_EmergencyFlag;
 
 /* 修正版ロジック */
 void Control_Headlight_Logic() {
@@ -26,7 +27,7 @@ void Control_Headlight_Logic() {
     if (Received_EmergencyFlag == 1) {
         printf("APP: Emergency Flashing ACTIVE!\n");
     }
-
+	
 }
 
 

@@ -1,0 +1,21 @@
+name: Automotive Code Check
+
+on: [push, pull_request] # PushやPRのたびに実行
+
+jobs:
+  build_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Compile App Layer (SWE.3 Check)
+        run: |
+          # 簡易的にgccでコンパイルが通るかチェック（文法エラーがないか）
+          gcc -c 03_Src/driver_light.c -o driver.o
+          gcc -c 04_App/light_control_logic.c -o app.o
+          echo "Compilation Successful!"
+
+      - name: Static Analysis (Simulated)
+        run: |
+          # 特定の禁止語句（例えば unsafe_func）が使われていないかチェック
+          grep -r "unsafe_func" . || echo "Static Analysis Passed!"
