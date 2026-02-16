@@ -17,3 +17,4 @@ void Set_Hardware_Light(int status) {
 void Update_Illuminance(int value) {
     IlluminanceValue = value;
 }
+
