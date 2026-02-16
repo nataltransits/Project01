@@ -4,6 +4,7 @@
 
 extern int IlluminanceValue;
 extern void Set_Hardware_Light(int status);
+extern int Received_EmergencyFlag;
 
 /* 修正版ロジック */
 void Control_Headlight_Logic() {
