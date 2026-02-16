@@ -27,6 +27,7 @@ void Control_Headlight_Logic() {
     if (Received_EmergencyFlag == 1) {
         printf("APP: Emergency Flashing ACTIVE!\n");
     }
+	
 }
 
 
