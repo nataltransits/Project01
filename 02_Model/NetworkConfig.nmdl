@@ -1,14 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<NetworkModel version="1.0">
+<NetworkModel version="1.1">
     <Nodes>
-        <Node name="BodyControlUnit" id="1" description="BCU - 主制御ECU"/>
-        <Node name="LightSensorUnit" id="2" description="LSU - 照度センサー"/>
-    </Nodes>
+        <Node name="BodyControlUnit" id="1" description="ライト制御用"/>
+        <Node name="BrakeControlUnit" id="3" description="ブレーキ制御用"/> </Nodes>
 
     <Messages>
-        <Message name="AmbientLightStatus" id="0x100" transmitter="LightSensorUnit">
+        <Message name="AmbientLightStatus" id="0x100" transmitter="LightSensorUnit">...</Message>
+        
+        <Message name="BrakeStatus" id="0x200" transmitter="BrakeControlUnit">
             <Signals>
-                <Signal name="IlluminanceValue" startBit="0" length="16" unit="Lux"/>
+                <Signal name="BrakePressure" startBit="0" length="8" unit="%"/>
+                <Signal name="EmergencyBrakeFlag" startBit="8" length="1" unit="bool"/>
             </Signals>
         </Message>
     </Messages>

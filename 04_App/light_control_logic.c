@@ -13,6 +13,12 @@ void Control_Headlight_Logic() {
     else if (IlluminanceValue >= 2000) {
         Set_Hardware_Light(0); // 消灯
     }
+
+	// 追加：急ブレーキ連携（SYS1要件）
+    if (Received_EmergencyFlag == 1) {
+        printf("APP: Emergency Flashing ACTIVE!\n");
+    }
+	
 }
 
 
